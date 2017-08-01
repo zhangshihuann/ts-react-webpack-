@@ -1,0 +1,28 @@
+{
+  "name": "ts-react-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typescript",
+    "react",
+    "webpack"
+  ],
+  "author": "philozhang",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^15.6.0",
+    "@types/react-dom": "^15.5.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.2.2",
+    "source-map-loader": "^0.2.1",
+    "ts-loader": "^2.3.2",
+    "typescript": "^2.4.2"
+  }
+}
