@@ -1,8 +1,18 @@
+// let webpack = require('webpack');
+
 module.exports = {
-    entry: "./src/main.tsx",
+    // entry: "./src/main.tsx",
+    entry: {
+        app: [
+            "webpack-dev-server/client?http://localhost:8090/",
+            "./src/main.tsx"
+        ]
+    },
     output: {
         filename: "bundle.js",
-        path: __dirname + "/dist"
+        path: __dirname + "/dist",
+        publicPath: "/dist/"
+        // publicPath: "http:localhost:8090/"
     },
 
     // Enable sourcemaps for debugging webpack's output.
@@ -33,4 +43,15 @@ module.exports = {
         "react": "React",
         "react-dom": "ReactDOM"
     },
+    devServer: {
+        // hot: true,
+        // inline: true,
+        port: 8090,
+        // host: "localhost",
+        // progress: true
+        hotOnly: true
+    }/*,
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ]*/
 };
