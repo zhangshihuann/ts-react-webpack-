@@ -1,0 +1,11 @@
+{
+    "defaultSeverity": "warning",
+    "extends": [
+        "tslint:recommended",
+        "tslint-react"
+    ],
+    "rules": {
+        "interface-name": false,
+        "trailing-comma": ["error", "never"]
+    }
+}
