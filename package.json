@@ -9,9 +9,6 @@
     "start": "webpack-dev-server --config webpack.config.dev.js --hot --inline",
     "lint": "tslint \"src/**/*.{ts,tsx}\""
   },
-  "pre-commit": [
-    "lint"
-  ],
   "keywords": [
     "typescript",
     "react",
@@ -27,7 +24,6 @@
   },
   "devDependencies": {
     "awesome-typescript-loader": "^3.2.2",
-    "pre-commit": "^1.2.2",
     "source-map-loader": "^0.2.1",
     "ts-loader": "^2.3.2",
     "tslint": "^5.6.0",
