@@ -3,7 +3,9 @@
     "plugins": [
         ["import", {
             "libraryName": "antd",
-            "style": true
+            "libraryDirectory": "lib",
+            "style": true 
         }]
     ]
+
 }

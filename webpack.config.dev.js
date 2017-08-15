@@ -27,37 +27,17 @@ module.exports = {
     module: {
         // rules: [
         loaders: [
-            // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
-            // { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
             {
-                test: /\.tsx?$/,
-                loader: "babel-loader!ts-loader"
+                //test: /\.ts(x?)$/,
+                //test: /\.(js|jsx|tsx|ts)?$/,
+                //loader: "babel-loader!ts-loader"
+                loader: "babel-loader!ts-loader",
+                exclude: /node_modules/
             },
-            {
-                test: /\.(js|jsx)$/,
-                include: path.resolve(__dirname, 'src'),
-                loader: 'babel',
-                query: {
-                    cacheDirectory: true,
-                    plugins: [["import", { libraryName: "antd", style: true}]]
-                }
-            },
-
-            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
-            // {
-            //     enforce: "pre",
-            //     test: /\.js$/,
-            //     loader: "source-map-loader"
-            // }
             {
                 test: /\.less$/,
                 loader: "style!css!less",
-                // include: path.resolve(__dirname, 'node_modules')
-                // include: path.resolve(__dirname, 'src')
-            },
-            {
-                test: /\.css$/,
-                loader: "style!css",
+                include: __dirname
                 // include: path.resolve(__dirname, 'node_modules')
                 // include: path.resolve(__dirname, 'src')
             }
