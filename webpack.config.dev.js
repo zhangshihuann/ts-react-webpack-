@@ -28,16 +28,16 @@ module.exports = {
         // rules: [
         loaders: [
             {
-                //test: /\.ts(x?)$/,
+                test: /\.ts(x?)$/,
                 //test: /\.(js|jsx|tsx|ts)?$/,
                 //loader: "babel-loader!ts-loader"
                 loader: "babel-loader!ts-loader",
-                exclude: /node_modules/
+                //exclude: /node_modules/
             },
             {
                 test: /\.less$/,
                 loader: "style!css!less",
-                include: __dirname
+                // include: __dirname
                 // include: path.resolve(__dirname, 'node_modules')
                 // include: path.resolve(__dirname, 'src')
             }
